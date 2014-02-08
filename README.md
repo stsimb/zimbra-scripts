@@ -9,7 +9,7 @@ Report zimbra mailbox size per folder for a specific user.
 Sample output
 
 ```
-[zimbra@zm-mbox-02 ~]$ /tmp/zimbra-size.sh sakis@zimbra.gr
+[zimbra@zimbra ~]$ /tmp/zimbra-size.sh sakis@zimbra.gr
 sakis@zimbra.gr's max mailbox size = 20480 MB, current mailbox size = 343.02 MB.
 
 size (MB)  msgcount     unread folder
@@ -55,3 +55,5 @@ Notes
 =====
 
 Tested with Zimbra 8.0.x.
+
+http://stsimb.irc.gr/2014/02/08/zimbra-mailbox-size-per-folder/
