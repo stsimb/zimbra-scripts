@@ -57,3 +57,14 @@ Notes
 Tested with Zimbra 8.0.x.
 
 http://stsimb.irc.gr/2014/02/08/zimbra-mailbox-size-per-folder/
+
+compact-index.sh
+================
+
+Compact indexes if they have more than 50000 deleted documents.
+Triggered by https://bugzilla.zimbra.com/show_bug.cgi?id=76414
+
+Execute script via cronjob (user zimbra), weekly
+
+    00 18 * * sat /path/to/compact-index.sh
+
