@@ -68,3 +68,9 @@ Execute script via cronjob (user zimbra), weekly
 
     00 18 * * sat /path/to/compact-index.sh
 
+
+zimbra-quota.sh
+===============
+
+Change Zimbra Mailbox Quota for a mailbox from command line.
+Interactive usage if no parameters given.
