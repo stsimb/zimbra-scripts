@@ -4,6 +4,8 @@
 # stsimb Sep 2015
 #
 export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/sbin:/usr/sbin"
+export PERL5LIB=/opt/zimbra/zimbramon/lib/x86_64-linux-thread-multi:/opt/zimbra/zimbramon/lib
+export PERLLIB=/opt/zimbra/zimbramon/lib/x86_64-linux-thread-multi:/opt/zimbra/zimbramon/lib
 SCRIPT_NAME=`basename $0`
 LOCKFILE="/tmp/${SCRIPT_NAME}.lock"
 [ -f ${LOCKFILE} ] && logger "$0 already running......" && echo "Already running..." && exit 1
