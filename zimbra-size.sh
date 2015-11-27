@@ -50,8 +50,15 @@ while read line ; do
       info=$(mysql -N -e "select size, metadata from mboxgroup${gid}.mail_item where mailbox_id=${mboxid} and id=${fid}")   
       size=$(echo ${info} | egrep -o ":szi.*:" | cut -d: -f2 | cut -c 4- | sed -e 's/e4$//')
       sizeMB="$(expr ${size} / 1024 / 1024 2>/dev/null)" # || echo 0)"
+      sizeKB="$(expr ${size} / 1024 2>/dev/null)"
     else
       sizeMB="0"
+      unset sizeKB
+    fi
+    if [ -z $sizeKB ]; then
+      sizeMB="${sizeMB}"
+    else
+      sizeMB="${sizeMB}.`printf '%.3s' ${sizeKB}`"
     fi
     printf "%9s %9s %10s " ${sizeMB} ${msgcount} ${unread}
     echo ${folder}
